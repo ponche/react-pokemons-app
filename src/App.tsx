@@ -21,6 +21,7 @@ const App: React.FC = () => {
                     <Route exact path="/" component={PokemonList} />
                     <Route exact path="/pokemons" component={PokemonList} />
                     <Route path="/pokemons/:id" component={PokemonsDetail} />
+                    <Route component={PageNotFound} />
                 </Switch>
             </div>
         </Router>
