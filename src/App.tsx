@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { POKEMONS } from './models/mock-pokemon';
+import Pokemon from './models/pokemon';
 
 const App: React.FC = () => {
-    const [name, setName] = useState<String>('React');
-    const [nbPokemons, setNbPokemons] = useState<Number>(POKEMONS.length)
+    const [pokemon] = useState<Pokemon[]>(POKEMONS);
 
     return (
         <div>
-            <h1>Hello, {name} !</h1>
-            <p>il y a {nbPokemons} dans le pokédex</p>
+            <h1>Pokédex</h1>
+            <p>il y a {pokemon.length} pokémons dans la pokédex</p>
         </div>
     )
 };
